@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "84515091-0536-4c39-a19f-00e0cd05fd49",
+		"name": "ECommerceSkinet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20707978"
+	},
+	"item": [
+		{
+			"name": "Product Controller",
+			"item": [
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Navigation properties are loaded\", () => {\r",
+									"    pm.expect(response[0].productType).not.eql(null);\r",
+									"    pm.expect(response[0]).not.contain.keys(\"productTypeId\");\r",
+									"    pm.expect(response[0]).not.contain.keys(\"productBrandId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Photo URL is complete\", () => {\r",
+									"    pm.expect(response[0].photoUrl).contain(\"https://localhost:7159/images/products\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/products",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Navigation properties are loaded\", () => {\r",
+									"    pm.expect(response.productType).not.eql(null);\r",
+									"    pm.expect(response).not.contain.keys(\"productTypeId\");\r",
+									"    pm.expect(response).not.contain.keys(\"productBrandId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Photo URL is complete\", () => {\r",
+									"    pm.expect(response.photoUrl).contain(\"https://localhost:7159/images/products\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/products/:productId",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Types",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Set is not empty\", () => {\r",
+									"    pm.expect(response[0]).to.contain.keys(\"name\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/products/types",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"products",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Set is not empty\", () => {\r",
+									"    pm.expect(response[0]).to.contain.keys(\"name\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/products/brands",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"products",
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7159/images/products/sb-ang1.png",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7159",
+							"path": [
+								"images",
+								"products",
+								"sb-ang1.png"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base URL",
+			"value": "https://localhost:7159/api/v1",
+			"type": "string"
+		}
+	]
+}
