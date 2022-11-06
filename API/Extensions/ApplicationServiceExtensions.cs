@@ -9,6 +9,7 @@ namespace API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
             services.Configure<ApiUrl>(config.GetSection(nameof(ApiUrl)));
             
             return services;

@@ -22,15 +22,15 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Navigation properties are loaded\", () => {\r",
-									"    pm.expect(response[0].productType).not.eql(null);\r",
-									"    pm.expect(response[0]).not.contain.keys(\"productTypeId\");\r",
-									"    pm.expect(response[0]).not.contain.keys(\"productBrandId\");\r",
-									"});\r",
+									"// pm.test(\"Navigation properties are loaded\", () => {\r",
+									"//     pm.expect(response[0].productType).not.eql(null);\r",
+									"//     pm.expect(response[0]).not.contain.keys(\"productTypeId\");\r",
+									"//     pm.expect(response[0]).not.contain.keys(\"productBrandId\");\r",
+									"// });\r",
 									"\r",
-									"pm.test(\"Photo URL is complete\", () => {\r",
-									"    pm.expect(response[0].photoUrl).contain(\"https://localhost:7159/images/products\");\r",
-									"})"
+									"// pm.test(\"Photo URL is complete\", () => {\r",
+									"//     pm.expect(response[0].photoUrl).contain(\"https://localhost:7159/images/products\");\r",
+									"// })"
 								],
 								"type": "text/javascript"
 							}
@@ -40,12 +40,39 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{Base URL}}/products",
+							"raw": "{{Base URL}}/products?sort=priceDsc&brandId=2&typeId=3&pageIndex=1&pageSize=5",
 							"host": [
 								"{{Base URL}}"
 							],
 							"path": [
 								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "priceDsc"
+								},
+								{
+									"key": "brandId",
+									"value": "2"
+								},
+								{
+									"key": "typeId",
+									"value": "3"
+								},
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "search",
+									"value": "purple",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -94,7 +121,7 @@
 							"variable": [
 								{
 									"key": "productId",
-									"value": "1"
+									"value": "17"
 								}
 							]
 						}
@@ -204,6 +231,82 @@
 								"images",
 								"products",
 								"sb-ang1.png"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BasketController",
+			"item": [
+				{
+					"name": "Get Basket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/basket/basketrId",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"basket",
+								"basketrId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create or Update Basket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"basket1\",\r\n    \"items\": [\r\n        {\r\n            \"id\": 17,\r\n            \"productName\": \"NIKE Purple Boots\",\r\n            \"price\": 150,\r\n            \"quantity\": 1,\r\n            \"photoUrl\": \"https://localhost:7159/images/products/boot-ang2.png\",\r\n            \"type\": \"Boots\",\r\n            \"brand\": \"NIKE\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/basket",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"basket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Basket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"basket1\",\r\n    \"items\": [\r\n        {\r\n            \"id\": 17,\r\n            \"productName\": \"NIKE Purple Boots\",\r\n            \"price\": 150,\r\n            \"quantity\": 1,\r\n            \"photoUrl\": \"https://localhost:7159/images/products/boot-ang2.png\",\r\n            \"type\": \"Boots\",\r\n            \"brand\": \"NIKE\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/basket/basket1",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"basket",
+								"basket1"
 							]
 						}
 					},
