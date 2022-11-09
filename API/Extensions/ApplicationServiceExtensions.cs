@@ -1,6 +1,8 @@
 using API.Helpers;
 using Core.Interfaces;
 using Infrastructure.Data;
+using Infrastructure.Services;
+using Infrastructure.Services.Helpers;
 
 namespace API.Extensions
 {
@@ -10,7 +12,9 @@ namespace API.Extensions
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<ITokenService, TokenService>();
             services.Configure<ApiUrl>(config.GetSection(nameof(ApiUrl)));
+            services.Configure<Jwt>(config.GetSection(nameof(Jwt)));
             
             return services;
         }

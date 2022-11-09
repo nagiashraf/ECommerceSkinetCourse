@@ -2,6 +2,7 @@ using API.SwaggerInfrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace API.Extensions
@@ -14,7 +15,26 @@ namespace API.Extensions
             {
                 c.ResolveConflictingActions(c => c.Last());
                 c.OperationFilter<SwaggerDefaultValues>();
+
+                var securitySchema = new OpenApiSecurityScheme
+                {
+                    Description = "JWT Auth Bearer Scheme",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
+
+                c.AddSecurityDefinition("Bearer", securitySchema);
+                var securityRequirement = new OpenApiSecurityRequirement{{securitySchema, new[] {"Bearer"}}};
+                c.AddSecurityRequirement(securityRequirement);
             });
+            
             services.AddApiVersioning(options =>
             {
                 options.ReportApiVersions = true;
