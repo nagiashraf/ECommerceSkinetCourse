@@ -13,6 +13,7 @@ namespace API.Extensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IOrderService, OrderService>();
             services.Configure<ApiUrl>(config.GetSection(nameof(ApiUrl)));
             services.Configure<Jwt>(config.GetSection(nameof(Jwt)));
             

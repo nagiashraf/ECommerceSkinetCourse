@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Core.Entities;
+using Core.Entities.OrderAggregate;
 
 namespace Infrastructure.Data
 {
@@ -31,6 +32,15 @@ namespace Infrastructure.Data
                 if (products is not null)
                 {
                     context.Products.AddRange(products);
+                }
+            }
+
+            if (!context.DeliveryMethods.Any())
+            {
+                List<DeliveryMethod>? deliveryMethods = GetDeserializedbjectsAsync<DeliveryMethod>("delivery.json");
+                if (deliveryMethods is not null)
+                {
+                    context.DeliveryMethods.AddRange(deliveryMethods);
                 }
             }
             

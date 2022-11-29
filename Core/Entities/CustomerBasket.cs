@@ -11,7 +11,7 @@ namespace Core.Entities
             Id = id;
         }
 
-        public string? Id { get; set; }
+        public string Id { get; set; } = string.Empty;
         public List<BasketItem> Items { get; set; } = new();
     }
 }
