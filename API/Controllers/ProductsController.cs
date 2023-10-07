@@ -48,13 +48,13 @@ namespace API.Controllers
         }
 
         [HttpGet("types")]
-        public async Task<ActionResult<IReadOnlyList<ProductToReturnDto>>> GetTypes()
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetTypes()
         {
             return Ok(await _unitOfWork.Repository<ProductType>().GetAllAsync());
         }
 
         [HttpGet("brands")]
-        public async Task<ActionResult<IEnumerable<ProductToReturnDto>>> GetBrands()
+        public async Task<ActionResult<IEnumerable<ProductBrand>>> GetBrands()
         {
             return Ok(await _unitOfWork.Repository<ProductBrand>().GetAllAsync());
         }

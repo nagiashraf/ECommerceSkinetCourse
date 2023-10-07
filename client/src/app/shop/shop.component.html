@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <section class="col-3">
+      <h5 class="text-warning ms-3">Sort</h5>
+      <select class="mb-3" style="outline: none" (change)="onSortSelected($any($event.target).value)">
+        <option *ngFor="let option of sortOptions" [value]="option.value">{{option.name}}</option>
+      </select>
+      <h5 class="text-warning ms-3">Brands</h5>
+      <ul class="list-group my-3">
+        <li
+          *ngFor="let brand of brands"
+          class="list-group-item"
+          style="cursor: pointer;"
+          [class.active]="brand.id === shopParams.brandId"
+          (click)="onBrandSelected(brand.id)"
+        >
+          {{brand.name}}</li>
+      </ul>
+      <h5 class="text-warning ms-3">Types</h5>
+      <ul class="list-group my-3">
+        <li
+          *ngFor="let type of types"
+          class="list-group-item"
+          style="cursor: pointer;"
+          [class.active]="type.id === shopParams.typeId"
+          (click)="onTypeSelected(type.id)"
+        >
+          {{type.name}}</li>
+      </ul>
+    </section>
+    <section class="col-9">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <header>
+          <span *ngIf="totalProductsCount > 0">showing
+            <strong>{{1 + (shopParams.pageNumber - 1) * shopParams.pageSize}} -
+              {{shopParams.pageSize * shopParams.pageNumber < totalProductsCount
+                ? shopParams.pageSize * shopParams.pageNumber
+                : totalProductsCount }}
+            </strong> of
+            <strong>{{totalProductsCount}}</strong> Results
+          </span>
+          <span *ngIf="totalProductsCount === 0">No results found for this filter</span>
+        </header>
+        <form #searchForm="ngForm" (ngSubmit)="onSearch()" class="row row-cols-lg-auto g-3 align-items-center">
+          <div class="col-12">
+            <input type="text" name="search" class="form-control" style="width: 300px;" placeholder="Search" [(ngModel)]="shopParams.search">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-outline-primary">Search</button>
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-outline-success" (click)="onReset()">Reset</button>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-4 mb-4" *ngFor="let product of products">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
+      </div>
+      <ngb-pagination
+        *ngIf="shopParams.pageSize < totalProductsCount"
+        [collectionSize]="totalProductsCount"
+        [(page)]="shopParams.pageNumber"
+        [pageSize]="shopParams.pageSize"
+        [maxSize]="3"
+        [boundaryLinks]="true"
+        (pageChange)="onPageChange($event)"
+        class="d-flex justify-content-center"
+      ></ngb-pagination>
+    </section>
+  </div>
+</div>

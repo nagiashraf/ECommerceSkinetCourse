@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DEItX2vQt8/jzMEs5T47a91T1byFQrVFaonJzrI2vzqiDu60UmRiMMkoelCIFdxYZNMmQQjwEb4T+Mcqliv/8g==",
+  "dgSpecHash": "bairZ+zrxM7/LYsmzNrfwVknuNiN475Fu3r9Ntm9NIBM6Jh7qYn0pHwgVeRoEd2i/7JLjhSPXKPWRZymVi1OhQ==",
   "success": true,
-  "projectFilePath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj",
+  "projectFilePath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

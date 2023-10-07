@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj": {}
+    "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj": {}
   },
   "projects": {
-    "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj": {
+    "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj",
+        "projectUniqueName": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj",
         "projectName": "API.Tests",
-        "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj",
+        "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\API.Tests.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\obj\\",
+        "outputPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj": {
-                "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj"
+              "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj": {
+                "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj"
               }
             }
           }
@@ -88,36 +86,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj": {
+    "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj",
+        "projectUniqueName": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj",
+        "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\obj\\",
+        "outputPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj"
+              "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -174,28 +170,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj": {
+    "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj",
+        "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\obj\\",
+        "outputPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -239,36 +233,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\obj\\",
+        "outputPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj": {
-                "projectPath": "d:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj"
+              "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj": {
+                "projectPath": "D:\\.NET Angular FSWD\\Projects\\ECommerceSkinet\\Core\\Core.csproj"
               }
             }
           }
@@ -318,7 +310,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     }
