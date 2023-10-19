@@ -10,3 +10,16 @@
   color: white;
   text-align: center;
 }
+
+.logo {
+  max-height: 70px;
+  cursor: pointer;
+}
+
+nav a {
+  color: #343a40;
+
+  &.active {
+    color: orange;
+  }
+}

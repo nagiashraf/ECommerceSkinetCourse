@@ -1,12 +1,13 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-4 border-bottom shadow-sm fixed-top bg-white">
   <a class="link-body-emphasis text-decoration-none">
-    <img src="/assets/images/logo.png" alt="logo" style="max-height: 70px;">
+    <img src="/assets/images/logo.png" alt="logo" class="logo" [routerLink]="['/']">
   </a>
 
   <nav class="flex-grow-1 d-inline-flex justify-content-center mt-2 mt-md-0 ms-md-auto text-uppercase" style="font-size: larger;">
-    <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Home</a>
-    <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Shop</a>
-    <a class="py-2 link-body-emphasis text-decoration-none" href="#">Contact</a>
+    <a class="me-3 py-2 text-decoration-none" [routerLink]="['/']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a class="me-3 py-2 text-decoration-none" [routerLink]="['/shop']" [routerLinkActive]="['active']">Shop</a>
+    <a class="py-2 text-decoration-none">Contact</a>
   </nav>
   <a class="basket me-5 link-body-emphasis text-decoration-none position-relative">
     <fa-icon [icon]="faCartShopping" size="2x"></fa-icon>
